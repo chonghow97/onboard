@@ -1,0 +1,40 @@
+fragment fragmentUser on User {
+  id
+  email
+  username
+  firstName
+  lastName
+  phoneCode
+  phoneNumber
+  dateOfBirth
+  role
+  status
+  updatedAt
+  createdAt
+}
+
+mutation userSignIn($input: UserSignInInput!) {
+  userSignIn(input: $input) {
+    user {
+      ...fragmentUser
+    }
+    accessToken
+    expiresIn
+  }
+}
+
+mutation userSignUp($input: UserCreateInput!) {
+  userSignUp(input: $input)
+}
+
+query getUserAuthProfile {
+  getUserAuthProfile {
+    ...fragmentUser
+  }
+}
+
+mutation UserUpdate($input: UserUpdateProfileInput!) {
+  userUpdateProfile(input: $input) {
+    ...fragmentUser
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "name": "lava-ignite",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint index.js app storybook test --ext .js,.ts,.tsx",
+    "lint:fix": "eslint index.js app storybook test --fix --ext .js,.ts,.tsx",
+    "test:e2e": "detox test -c ios.sim.debug",
+    "build:e2e": "detox build -c ios.sim.debug",
+    "ci:test:e2e": "detox test -c ios.sim.release -l verbose --cleanup",
+    "ci:build:e2e": "detox build -c ios.sim.release",
+    "compile": "tsc --noEmit -p . --pretty",
+    "format": "npm-run-all format:*",
+    "format:js": "prettier --write '**/*.js'",
+    "format:json": "prettier --write '**/*.json'",
+    "format:md": "prettier --write '**/*.md'",
+    "format:ts": "prettier --write '**/*.ts{,x}'",
+    "hack:types-react-navigation": "rimraf node_modules/@types/react-navigation/node_modules/@types",
+    "hack:types-react-native": "rimraf node_modules/@types/react-native/node_modules/@types",
+    "hack:types-react-test-renderer": "rimraf node_modules/@types/react-test-renderer/node_modules/@types",
+    "patch": "patch-package",
+    "postinstall": "node ./bin/postInstall",
+    "prepare": "npm-run-all patch hack:*",
+    "storybook": "start-storybook -p 9001 -c ./storybook",
+    "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
+    "gql:generate": "graphql-codegen --config codegen.yml",
+    "rename": "react-native-rename",
+    "tw": "npx create-tailwind-rn"
+  },
+  "dependencies": {
+    "@apollo/client": "3.2.5",
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/datetimepicker": "3.0.8",
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/bottom-tabs": "5.11.2",
+    "@react-navigation/drawer": "5.11.4",
+    "@react-navigation/native": "^5.1.5",
+    "@react-navigation/stack": "5.13.0",
+    "@types/lodash": "4.14.165",
+    "@types/react-native-dotenv": "0.2.0",
+    "@types/styled-components": "5.1.4",
+    "apisauce": "1.1.2",
+    "babel-plugin-module-resolver": "4.0.0",
+    "email-validator": "2.0.4",
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
+    "i18n-js": "^3.0.11",
+    "libphonenumber-js": "1.9.6",
+    "lodash": "4.17.20",
+    "lodash.throttle": "4.1.1",
+    "mobx": "^4.15.4",
+    "mobx-react-lite": "^1.4.1",
+    "mobx-state-tree": "^3.14.1",
+    "moment": "2.29.1",
+    "postcss": "8.2.4",
+    "ramda": "0.27.1",
+    "react": "16.13.1",
+    "react-hook-form": "6.13.1",
+    "react-native": "0.63.2",
+    "react-native-confirmation-code-input": "1.0.4",
+    "react-native-country-picker-modal": "2.0.0",
+    "react-native-dotenv": "2.4.2",
+    "react-native-fast-image": "8.3.4",
+    "react-native-flash-message": "^0.1.17",
+    "react-native-gesture-handler": "^1.5.0",
+    "react-native-keychain": "6.1.1",
+    "react-native-localize": "^1.0.0",
+    "react-native-modal-datetime-picker": "9.1.0",
+    "react-native-reanimated": "1.13.2",
+    "react-native-safe-area-context": "0.7.3",
+    "react-native-safe-area-view": "1.1.1",
+    "react-native-screens": "^2.10.1",
+    "react-native-splash-screen": "3.2.0",
+    "react-native-tab-view": "2.15.2",
+    "react-native-vector-icons": "7.1.0",
+    "react-native-video": "5.1.0-alpha8",
+    "react-native-video-controls": "2.7.1",
+    "react-navigation-header-buttons": "6.0.0",
+    "reactotron-mst": "^3.1.1",
+    "reactotron-react-native": "^5.0.0",
+    "styled-components": "5.2.1",
+    "tailwind-rn": "3.0.0",
+    "tailwindcss": "2.0.2",
+    "validate.js": "0.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-optional-catch-binding": "^7.0.0",
+    "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "@graphql-codegen/add": "^2.0.1",
+    "@graphql-codegen/cli": "^1.19.1",
+    "@graphql-codegen/near-operation-file-preset": "^1.17.12",
+    "@graphql-codegen/typescript": "^1.17.11",
+    "@graphql-codegen/typescript-document-nodes": "^1.17.8",
+    "@graphql-codegen/typescript-operations": "^1.17.9",
+    "@graphql-codegen/typescript-react-apollo": "^2.1.1",
+    "@storybook/addon-storyshots": "5.3.19",
+    "@storybook/react-native": "5.3.19",
+    "@storybook/react-native-server": "5.3.19",
+    "@types/graphql": "^14.5.0",
+    "@types/i18n-js": "^3.0.3",
+    "@types/jest": "^25.2.3",
+    "@types/ramda": "0.26.44",
+    "@types/react": "16.9.23",
+    "@types/react-native": "^0.63.2",
+    "@types/react-native-vector-icons": "6.4.6",
+    "@types/react-test-renderer": "^16.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "babel-jest": "^26.6.3",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "detox": "^16.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "eslint-plugin-react-native": "^3.6.0",
+    "husky": "^4.3.0",
+    "ignite-bowser": "^5.4.1",
+    "jest": "25.5.4",
+    "jetifier": "^1.6.2",
+    "lint-staged": "^10.5.1",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "npm-run-all": "4.1.5",
+    "patch-package": "6.2.2",
+    "postinstall-prepare": "1.0.1",
+    "prettier": "^2.0.4",
+    "react-devtools-core": "4.8.2",
+    "react-powerplug": "1.0.0",
+    "react-test-renderer": "16.13.1",
+    "rimraf": "3.0.2",
+    "solidarity": "3.0.0",
+    "typescript": "3.9.7"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "<rootDir>/node_modules/react-native/jest/setup.js",
+      "<rootDir>/test/setup.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/e2e"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-native|@react-navigation|@storybook|@react-native-community)"
+    ]
+  },
+  "detox": {
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/LavaIgnite.app",
+        "build": "xcodebuild -workspace ios/LavaIgnite.xcworkspace -scheme LavaIgnite -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "type": "ios.simulator",
+        "name": "iPhone 8"
+      },
+      "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/LavaIgnite.app",
+        "build": "xcodebuild -workspace ios/LavaIgnite.xcworkspace -scheme LavaIgnite -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "type": "ios.simulator",
+        "name": "iPhone 8"
+      }
+    }
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}

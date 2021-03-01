@@ -1,0 +1,19 @@
+import React from "react";
+import { <%= props.pascalCaseName %>Props } from "./props";
+import { Container } from "./styles";
+
+// More complex reusable components and hooks
+// calls reusable hooks/functionws from `./hooks`
+export const <%= props.pascalCaseName %> = (props: <%= props.pascalCaseName %>Props) => {
+  const { ...restProps } = props;
+  // --------------------STATES & VARIABLES
+
+  // --------------------HOOKS
+
+  // --------------------FUNCTIONS
+
+  // --------------------RENDER
+  return <Container {...restProps} />;
+};
+
+<%= props.pascalCaseName %>.defaultProps = {};

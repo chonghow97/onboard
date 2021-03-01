@@ -1,0 +1,24 @@
+import React from "react";
+import { Button, Screen, Text } from "components";
+import { tw } from "tailwind";
+import { translate } from "i18n";
+import { <%= props.pascalCaseName %>Props } from "./props";
+import { Container } from "./styles";
+
+// Handles rendering screen, receive data and methods needed from index as props
+export const <%= props.pascalCaseName %> = (props: <%= props.pascalCaseName %>Props) => {
+  const { onPressBack } = props;
+  return (
+    <Screen>
+      <Container>
+        <Text style=<%- '{tw("text-primary font-bold text-4xl m-14")}' %>>
+          <%= props.pascalCaseName %>Screen
+        </Text>
+        <Button text={translate("common.back")} onPress={onPressBack} />
+      </Container>
+    </Screen>
+  );
+};
+
+// set default variables that might be null, ex: backend data
+<%= props.pascalCaseName %>.defaultProps = {};

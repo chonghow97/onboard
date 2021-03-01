@@ -1,0 +1,97 @@
+{
+  "common": {
+    "ok": "OK!",
+    "cancel": "Cancel",
+    "back": "Back",
+    "continue": "Continue",
+    "submit": "Submit"
+  },
+  "auth": {
+    "fieldsTitle": {
+      "email": "Email",
+      "username": "Username",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "password": "Password",
+      "confrimPassword": "Confirm Password",
+      "phoneNumber": "Phone Number",
+      "dob": "Date of Birth",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm New Password"
+    },
+    "login": "Login",
+    "signup": "Signup",
+    "forgotPassword": "Forgot Password",
+    "resetPassword": "Reset Password",
+    "send": "Send",
+    "enterPhone": "Enter your Phone Number",
+    "enterCode": "Enter code here",
+    "enterEmail": "Enter your email",
+    "verify": "Verify",
+    "forgetPassword": "Forgotten your password?",
+    "codeHint": "We will send an otp to",
+    "phoneHint": "We will send an otp to this phone number",
+    "emailHint": "We will send an otp to this email",
+    "codeNotReceived": "Didn't receive the code?",
+    "resend": "Resend"
+  },
+  "placeholder": {
+    "email": "example@mail.com",
+    "password": "Enter your password",
+    "newPassword": "Enter New Password",
+    "confirmPassword": "Confirm Password",
+    "username": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "123456789"
+  },
+  "errors": {
+    "invalidPhoneNumber": "Invalid phone number.",
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "passwordNotSame": "Password not same",
+    "login": "Login failed"
+  },
+  "app": {
+    "profile": {
+      "headerTitle": "My Account",
+      "title": "LavaXIgnite",
+      "editProfile": "Edit Profile"
+    }
+  },
+  "welcomeScreen": {
+    "poweredBy": "POWERED BY BOWSER",
+    "readyForLaunch": "Ready for launch.",
+    "continue": "CONTINUE",
+    "logout": "LOGOUT"
+  },
+  "demoScreen": {
+    "howTo": "HOW TO",
+    "title": "What’s In This Stack?",
+    "tagLine": "Congratulations, you’ve got a very advanced React Native app template here.  Take advantage of this boilerplate!",
+    "reactotron": "Demo Reactotron",
+    "androidReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running, run adb reverse tcp:9090 tcp:9090 from your terminal, and reload the app.",
+    "iosReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app."
+  },
+  "editProfileScreen": {
+    "username": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "email": "Email",
+    "dob": "Date of Birth",
+    "language": "Language",
+    "changeProfilePhoto": "Change Profile Photo",
+    "changePassword": "Change Password",
+    "save": "Save",
+    "english": "English",
+    "chinese": "Chinese",
+    "verifyPassword": "Verify Password",
+    "verifyPasswordHint": "Keep your account safe, please verify your identity by entering your password",
+    "updated": "Profile updated successfully"
+  },
+  "storybook": {
+    "placeholder": "Placeholder",
+    "field": "Field"
+  }
+}

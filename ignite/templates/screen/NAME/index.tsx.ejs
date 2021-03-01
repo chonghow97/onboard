@@ -1,0 +1,18 @@
+import React from "react";
+import { observer } from "mobx-react-lite";
+import { useNavigation } from "@react-navigation/native";
+import { <%= props.pascalCaseName %> } from "./component";
+
+// Handles data and methods needed in render and pass it to component.tsx
+export const <%= props.pascalCaseName %>Screen = observer(() => {
+  // --------------------STATES & VARIABLES
+  const navigation = useNavigation();
+
+  // --------------------HOOKS
+
+  // --------------------FUNCTIONS
+  const onPressBack = () => navigation.goBack();
+
+  // --------------------RENDER
+  return <<%= props.pascalCaseName %> onPressBack={onPressBack} />;
+});
