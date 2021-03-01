@@ -45,7 +45,7 @@ module.exports = {
   /**
    * A subtle color used for borders and lines.
    */
-  line: palette.offWhite,
+  line: palette.random,
   /**
    * The default color of text in many components.
    */
