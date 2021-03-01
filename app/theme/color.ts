@@ -31,7 +31,8 @@ module.exports = {
   /**
    * The main tinting color.
    */
-  primary: palette.imperialRed,
+  primary: "#FED55F",
+  custome: "#263238",
 
   /**
    * The secondary tinting color.
