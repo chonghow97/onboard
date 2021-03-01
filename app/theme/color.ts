@@ -27,7 +27,7 @@ module.exports = {
   /**
    * Shadow color, for elevations, modals, etc.
    */
-  shadow: "rgba(0, 0, 0, 0.5)",
+  shadow: "rgba(0, 0, 0, 0)",
   /**
    * The main tinting color.
    */
